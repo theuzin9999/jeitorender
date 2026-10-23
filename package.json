@@ -1,0 +1,8 @@
+{
+  "name": "aviator-render-capturer",
+  "version": "2.2.0",
+  "description": "Capturador de Velas do Aviator",
+  "main": "index.js",
+  "scripts": { "start": "node index.js" },
+  "dependencies": { "playwright": "1.40.0" }
+}

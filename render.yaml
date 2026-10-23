@@ -1,0 +1,13 @@
+services:
+  - type: worker            # Background Worker (roda 24/7, sem porta HTTP)
+    name: aviator-capturer
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: starter           # Chromium precisa de RAM; se estourar memória, suba p/ standard
+    region: oregon
+    autoDeploy: true
+    envVars:
+      - key: AVIATOR_USER_URL
+        sync: false         # você preenche no painel (não fica no repositório)
+      - key: FIREBASE_HISTORY_URL
+        sync: false
